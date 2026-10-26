@@ -1,11 +1,11 @@
 /*
  * * Nombre de la clase: AutomatasCelulares
- * * Información de la versión: 1.0 (Práctica 05: Autómatas Celulares)
- * * Autor: Olvera Ruiz Oscar Leonardo.
+ * * Información de la versión: 4.0 (AutómatasCelulares)
+ * * Autor: Oscar Leonardo Olvera Ruiz.
  * * Profesor: Manuel Alcántara Juárez.
  * * Ayudante: Ángel Renato Zamudio Malagón.
  * * Ayudante de laboratorio: Rodrigo Alejandro Sánchez Morales.
- * * Fecha: 20 de octubre de 2026.
+ * * Fecha: 26 de octubre de 2026.
  * * Copyright: © 2026 Olvera Ruiz Oscar Leonardo. Uso académico, Facultad de Ciencias, UNAM.
  */
 
@@ -13,31 +13,11 @@ import java.util.Locale;
 import java.util.NoSuchElementException;
 import java.util.Scanner;
 
-/**
- * Autómatas Celulares: simulación del "Juego de la vida" de John Conway.
- *
- * El tablero se guarda en una matriz boolean[][] (true = celda viva, false = celda muerta).
- * El programa pide el estado inicial (un patrón predefinido o las coordenadas de las celdas
- * vivas) y calcula y muestra una cantidad determinada de generaciones. En cada generación se
- * aplican, a todas las celdas al mismo tiempo, estas cuatro reglas:
- *
- *   1. Soledad:        una celda viva con menos de 2 vecinos vivos muere.
- *   2. Supervivencia:  una celda viva con 2 o 3 vecinos vivos sigue viva.
- *   3. Sobrepoblación: una celda viva con más de 3 vecinos vivos muere.
- *   4. Reproducción:   una celda muerta con exactamente 3 vecinos vivos nace.
- *
- * Simultaneidad: las reglas se leen del tablero actual y los nuevos estados se escriben en un
- * tablero temporal; al terminar la generación, el tablero viejo se reemplaza por el nuevo.
- * Las celdas que quedan fuera de los bordes del tablero se consideran muertas.
- *
- * Compilación: javac -encoding UTF-8 AutomatasCelulares.java
- * Ejecución:   java AutomatasCelulares
- */
 public class AutomatasCelulares {
 
-    // ========================================================================================
-    // CONSTANTES (valores que no cambian a lo largo del programa)
-    // ========================================================================================
+    // ===========
+    // CONSTANTES.
+    // ===========
 
     /** Número de filas del tablero. */
     private static final int FILAS_TABLERO = 15;
@@ -108,16 +88,16 @@ public class AutomatasCelulares {
     /** Configuración regional para pasar a minúsculas respetando los acentos. */
     private static final Locale IDIOMA_ESPANOL = Locale.forLanguageTag("es-MX");
 
-    // ========================================================================================
-    // VARIABLES DE CLASE
-    // ========================================================================================
+    // ===================
+    // VARIABLES DE CLASE.
+    // ===================
 
     /** Lector de la entrada estándar (teclado). */
     private static Scanner teclado = new Scanner(System.in);
 
-    // ========================================================================================
-    // PROGRAMA PRINCIPAL
-    // ========================================================================================
+    // ===================
+    // PROGRAMA PRINCIPAL.
+    // ===================
 
     /**
      * Punto de entrada: muestra el menú principal y lo repite hasta que el usuario elige salir.
@@ -168,9 +148,9 @@ public class AutomatasCelulares {
         }
     }
 
-    // ========================================================================================
-    // MENÚS Y REGLAS
-    // ========================================================================================
+    // ===============
+    // MENÚS Y REGLAS.
+    // ===============
 
     /**
      * Imprime las opciones del menú principal.
@@ -220,9 +200,9 @@ public class AutomatasCelulares {
         System.out.println("Las celdas fuera del tablero se consideran muertas.");
     }
 
-    // ========================================================================================
-    // ESTADO INICIAL DEL TABLERO
-    // ========================================================================================
+    // ===========================
+    // ESTADO INICIAL DEL TABLERO.
+    // ===========================
 
     /**
      * Pide al usuario un patrón predefinido, lo coloca en el tablero y ejecuta la simulación.
@@ -397,9 +377,9 @@ public class AutomatasCelulares {
         }
     }
 
-    // ========================================================================================
-    // SIMULACIÓN
-    // ========================================================================================
+    // ===========
+    // SIMULACIÓN.
+    // ===========
 
     /**
      * Muestra el estado inicial, pide cuántas generaciones simular y las calcula y muestra una
