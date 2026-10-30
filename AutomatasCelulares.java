@@ -520,9 +520,9 @@ public class AutomatasCelulares {
         return celdasVivas;
     }
 
-    // ========================================================================================
-    // SALIDA EN PANTALLA
-    // ========================================================================================
+    // ===================
+    // SALIDA EN PANTALLA.
+    // ===================
 
     /**
      * Imprime el tablero actual y su estado: número de generación, celdas vivas y el estado de
@@ -586,9 +586,9 @@ public class AutomatasCelulares {
         }
     }
 
-    // ========================================================================================
-    // LECTURA DE DATOS
-    // ========================================================================================
+    // =================
+    // LECTURA DE DATOS.
+    // =================
 
     /**
      * Muestra un mensaje y lee una línea completa del teclado, sin espacios al inicio ni al final.
